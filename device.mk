@@ -358,9 +358,9 @@ PRODUCT_PACKAGES += \
 
 # NFC
 PRODUCT_PACKAGES += \
-    android.hardware.nfc@1.2-service.pn8x \
+    android.hardware.nfc@1.2.vendor \
+    android.hardware.nfc@1.0-impl:64 \
     NfcNci \
-    SecureElement \
     Tag
 
 # OMX
