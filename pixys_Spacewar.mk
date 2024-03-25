@@ -33,6 +33,7 @@ TARGET_INCLUDE_STOCK_ARCORE := true
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
 TARGET_INCLUDE_LIVE_WALLPAPERS := true
 TARGET_INCLUDE_OEM_CAMERA := true
+TARGET_INCLUDE_CARRIER_SETTINGS := true
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := pixys_Spacewar
