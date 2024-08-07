@@ -4,6 +4,20 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Derp Flags
+DERP_BUILDTYPE=Official
+DERP_VERSION_APPEND_TIME_OF_DAY=true
+EXTRA_UDFPS_ICONS=true
+TARGET_NOT_USES_BLUR=true
+TARGET_USES_PICO_GAPPS=true
+
+# Remove Packages
+PRODUCT_PACKAGES += \
+    RemovePackages
+
+# ViPER4AndroidFX
+$(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
+
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
@@ -19,22 +33,6 @@ $(call inherit-product, vendor/nothing/camera/nothing-camera.mk)
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
-
-# RRO (pixys)
-PRODUCT_PACKAGES += \
-    PixysFrameworksSpacewar \
-    PixysSystemUISpacewar
-
-# RRO (Spacewar)
-PRODUCT_PACKAGES += \
-    SpacewarCarrierConfig \
-    SpacewarFrameworks \
-    SpacewarNfc \
-    SpacewarSettingsProvider \
-    SpacewarSettings \
-    SpacewarSystemUI \
-    SpacewarTelephony \
-    WifiResCommon
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
